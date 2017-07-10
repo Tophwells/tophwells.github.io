@@ -1,0 +1,39 @@
+<!html5>
+<html>
+	<head>
+		<title>
+			Cubic interpolation
+		</title>
+		<link rel="stylesheet" type = "text/css" href="style.css">
+	</head>
+	<body>
+		<h1> Cubic interpolation demo </h1>
+		<div class="graph-container">
+			<!--<canvas id ="redgraph" width ="600" height = "400" style="border: 1px solid black;"></canvas>-->
+			<canvas id ="bluegraph" width ="600" height = "400" style="border: 1px solid black;"></canvas>
+		</div>
+		<div class = "text-container">
+		<p>This page will draw a smooth curve between several points on a graph.</p>
+		<p>The graph already has three points on it. Move them around, or add new ones, and see how the curve changes in response.</p>
+		<p>
+		Instructions:
+		<ul>
+			<li>Click on the canvas to add points.
+			<li>Click and drag a point to move it.
+			<li>Drag a point outside the graph or shift-click to delete it.
+		</ul>
+		</p>
+		</div>
+		<script type="text/javascript" src="curvy.js"></script>
+		<script>
+		/*redcanvas = document.getElementById("redgraph");
+		redgraph = new curvy.Graph(redcanvas);
+		redgraph.fillStyle = "#FF0000";*/
+		bluecanvas = document.getElementById("bluegraph");
+		bluegraph = new curvy.Graph(bluecanvas);
+		bluegraph.fillStyle = "#0000FF";
+		bluegraph.points = new Set([{"x":135,"y":241},{"x":271,"y":294},{"x":395,"y":80}]);
+		bluegraph.redraw();
+		</script>
+	</body>
+</html>
