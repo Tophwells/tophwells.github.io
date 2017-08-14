@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>
-			Cubic interpolation
+			Cubic Interpolation Demo
 		</title>
 		<link rel="stylesheet" type = "text/css" href="style.css">
 	</head>
 	<body>
-		<h1> Cubic interpolation demo </h1>
+		<h1> Smooth curves </h1>
 		<div class="graph-container">
 			<!--<canvas id ="redgraph" width ="600" height = "400" style="border: 1px solid black;"></canvas>-->
 			<canvas id ="bluegraph" width ="600" height = "400" style="border: 1px solid black;"></canvas>
@@ -23,6 +23,7 @@
 			<li>Drag a point outside the graph or shift-click to delete it.
 		</ul>
 		</p>
+		<p>The graph is calculated with <a href="https://en.wikipedia.org/wiki/Cubic_Hermite_spline">cubic interpolation</a>. This makes sure that the graph is differentiable (no sharp corners) everywhere.</p>
 		</div>
 		<script type="text/javascript" src="curvy.js"></script>
 		<script>
